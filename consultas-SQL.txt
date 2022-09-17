@@ -1,0 +1,4 @@
+//Traer el producto con mayor cantidad de stock
+SELECT * FROM `products` WHERE product_stock = (SELECT MAX(product_stock) FROM products);
+// Traer el producto mas vendido
+SELECT *,SUM(sales_amount) AS cantidad from sales  GROUP BY sales_amount;
