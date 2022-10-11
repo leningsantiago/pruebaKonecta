@@ -4,17 +4,6 @@ require_once('../../../config/consultasBD.php');
 ?>
 <!DOCTYPE html>
 
-<!-- =========================================================
-* Sneat - Bootstrap 5 HTML Admin Template - Pro | v1.0.0
-==============================================================
-
-* Product Page: https://themeselection.com/products/sneat-bootstrap-html-admin-template/
-* Created by: ThemeSelection
-* License: You must have a valid license purchased in order to legally use the theme for your project.
-* Copyright ThemeSelection (https://themeselection.com)
-
-=========================================================
- -->
 <!-- beautify ignore:start -->
 <html
   lang="en"
@@ -56,8 +45,7 @@ require_once('../../../config/consultasBD.php');
 
     <!-- Vendors CSS -->
     <link rel="stylesheet" href="../../../src/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
-
-    <link rel="stylesheet" href="../../../src/assets/vendor/libs/apex-charts/apex-charts.css" />
+    <!-- <link rel="stylesheet" href="../../../src/assets/vendor/libs/apex-charts/apex-charts.css" /> -->
 
     <!-- DATABLES -->
     <link rel="stylesheet" href="//cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
@@ -200,7 +188,7 @@ require_once('../../../config/consultasBD.php');
                     <div class="dropdown-divider"></div>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="auth-login-basic.html">
+                    <a class="dropdown-item" href="#">
                       <i class="bx bx-power-off me-2"></i>
                       <span class="align-middle">Log Out</span>
                     </a>
@@ -219,7 +207,7 @@ require_once('../../../config/consultasBD.php');
           <!-- Content -->
 
           <div class="container-xxl flex-grow-1 container-p-y">
-              <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Ventas/</span></h4>
+              <!-- <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Ventas</span></h4> -->
 
               <!-- Basic Layout & Basic with Icons -->
               <div class="row">
@@ -287,8 +275,9 @@ require_once('../../../config/consultasBD.php');
                         <tr>
                             <th>ID</th>
                             <th>PRODUCT_ID</th>
-                            <th>price</th>
-                            <th>sales_amount</th>
+                            <th>PRODUCT NAME</th>
+                            <th>PRICE</th>
+                            <th>SALES_AMOUNT</th>
                             <th>sales_create_date</th>
                           
                         </tr>
@@ -299,6 +288,7 @@ require_once('../../../config/consultasBD.php');
 
                             <td><?php echo $venta['sales_id'] ?></td>
                             <td><?php echo $venta['product_id'] ?></td>
+                            <td><?php echo $venta['product_name'] ?></td>
                             <td><?php echo $venta['price'] ?></td>
                             <td><?php echo $venta['sales_amount'] ?></td>
                             <td><?php echo $venta['sales_create_date'] ?></td>
@@ -495,7 +485,7 @@ require_once('../../../config/consultasBD.php');
           ) {
             swalWithBootstrapButtons.fire(
               'Cancelled',
-              'Your imaginary file is safe :)',
+              'Proceso Cancelado.',
               'error'
             )
           }

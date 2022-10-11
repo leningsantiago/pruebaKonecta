@@ -1,20 +1,9 @@
 <?php
-  require_once('../../../config/connect.php');
-  require_once('../../../config/consultasBD.php');
+require_once('../../../config/connect.php');
+require_once('../../../config/consultasBD.php');
 ?>
 <!DOCTYPE html>
 
-<!-- =========================================================
-* Sneat - Bootstrap 5 HTML Admin Template - Pro | v1.0.0
-==============================================================
-
-* Product Page: https://themeselection.com/products/sneat-bootstrap-html-admin-template/
-* Created by: ThemeSelection
-* License: You must have a valid license purchased in order to legally use the theme for your project.
-* Copyright ThemeSelection (https://themeselection.com)
-
-=========================================================
- -->
 <!-- beautify ignore:start -->
 <html
   lang="en"
@@ -56,8 +45,7 @@
 
     <!-- Vendors CSS -->
     <link rel="stylesheet" href="../../../src/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
-
-    <link rel="stylesheet" href="../../../src/assets/vendor/libs/apex-charts/apex-charts.css" />
+    <!-- <link rel="stylesheet" href="../../../src/assets/vendor/libs/apex-charts/apex-charts.css" /> -->
 
     <!-- DATABLES -->
     <link rel="stylesheet" href="//cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
@@ -233,12 +221,12 @@
                         <th>PESO</th>
                         <th>CATEGORIA</th>
                         <th>STOCK</th>
-                        <th>FEHCA CREACIÓN</th>
+                        <th>FECHA CREACIÓN</th>
                         <th>ACTIONS</th>
                       </tr>
                     </thead>
                     <tbody class="table-border-bottom-0">
-                    <?php foreach ($productos as $producto) {?>                         
+                    <?php foreach ($productos as $producto) { ?>                         
                       <tr>
                         <td><?php echo $producto['product_id'] ?></td>
                         <td><?php echo $producto['product_name'] ?></td>
@@ -268,8 +256,6 @@
           <!-- Modal Eliminar -->
           <dib id="modal_deleteProducts"></dib>
 
-
-
           <!-- Footer -->
           <footer class="content-footer footer bg-footer-theme">
             <div class="container-xxl d-flex flex-wrap justify-content-between py-2 flex-md-row flex-column">
@@ -282,7 +268,7 @@
           <div class="content-backdrop fade"></div>
         </div>
         <!-- Content wrapper -->
-</div>
+        </div>
         <!-- / Layout page -->
       </div>
 
@@ -321,12 +307,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
     <script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.html5.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.print.min.js"></script>
-
-    
     <script src="../../../src/scripts/jquery.validate.js"></script>
     <script src="../../controllers/productsController.js"></script>
-
-
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <!-- Funciones para la tadatable -->
@@ -442,7 +424,7 @@
           ) {
             swalWithBootstrapButtons.fire(
               'Cancelled',
-              'Your imaginary file is safe :)',
+              'Proceso Cancelado',
               'error'
             )
           }

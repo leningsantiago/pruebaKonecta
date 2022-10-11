@@ -9,7 +9,7 @@ $consultaProductos = "SELECT * FROM `products` p INNER JOIN categories c ON p.ca
 $productos = mysqli_query($conn, $consultaProductos);
 
 //CONSULTA LAS VENTAS
-$consultaVentas = "SELECT * FROM `sales` ORDER by sales_create_date ASC ;";
+$consultaVentas = "SELECT * FROM `sales` inner join products on products.product_id = sales.product_id ORDER by sales_create_date ASC;;";
 $ventas = mysqli_query($conn, $consultaVentas);
 
 

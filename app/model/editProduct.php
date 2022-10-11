@@ -16,7 +16,7 @@ $product_weight = $_POST['product_weight'];
 $categories_fk_id = $_POST['categories_fk_id'];
 $product_stock = $_POST['product_stock'];
 
-if ($product_name and $product_reference and $product_price and $product_weight and $categories_fk_id and $product_stock) {
+if ($product_name || $product_reference || $product_price || $product_weight || $categories_fk_id || $product_stock) {
 
   $sql2 = "UPDATE `products` SET `product_name`='$product_name',`product_reference`='$product_reference',`product_price`='$product_price',`product_weight`='$product_weight',`categories_fk_id`='$categories_fk_id',`product_stock`='$product_stock' WHERE product_id = '$id_product' ";
 

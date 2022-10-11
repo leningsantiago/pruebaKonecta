@@ -7,7 +7,6 @@ $userName = "root"; //root
 $password = "";
 
 $dbName = "bd_cafeteria";
-//$dbName = "cursoprogramacion";
 
 // ======= crear la conexion =======
 $conn = mysqli_connect($serverName, $userName, $password, $dbName);
