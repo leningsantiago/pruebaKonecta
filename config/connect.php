@@ -2,7 +2,7 @@
 
 // connect database
 //  ======== conexion a nuestra base de datos ==========
-$serverName = "127.0.0.1";//localhost
+$serverName = "localhost";//localhost
 $userName = "root"; //root
 $password = "";
 
